@@ -1,0 +1,117 @@
+html { font-size: 62.5% }
+
+@font-face {
+    font-family: 'nokian11';
+    font-display: swap;
+    src:  local('nokian11'),
+        url('./nokian11.ttf')  format('truetype')
+}
+
+  
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'nokian11', arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.game {
+    display: table;
+}
+
+.game-name {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-score-title {
+    font-size: 1.6rem;
+}
+
+.game-score {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.game-field {
+    display: block;
+    background: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    margin: 1.4rem 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(41,76,124,.9);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+
+.pause .overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay-image {
+    width: 18rem;
+    height: auto;
+    display: block;
+}
+
+.pixel {
+    background: #000;
+    transition: background .3s ease;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.apple {
+    background: red;
+    transition: background .3s ease;
+}
+
+.game-info {
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.nokia {
+    background: #294C7C;
+    color: #FFF;
+}
+
+.nokia .game-field {
+    background: #A8C64E
+}
+
+.nokia .trail {
+    background: #3C412C;
+}
+
+.nokia .apple {
+    background: #3C412C;
+    opacity: .7;
+}
